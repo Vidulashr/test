@@ -147,17 +147,22 @@
             }
           ],
           "url": {
-            "raw": "http:///api/postalCode-ws/validation/{postalCode}/",
+            "raw": "http:///api/postalCode-ws/validation/:postalCode/",
             "protocol": "http",
             "host":[],
             "path": [
               "api",
               "postalCode-ws",
               "validation",
-              "{postalCode}"
+              ":postalCode"
             ],
             "query": [],
-            "variable": []
+            "variable": [
+		    {
+		        "key": "postalCode",
+			"value": ""
+		    }
+	    ]
           }
         },
         "response": [
@@ -178,10 +183,15 @@
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}"
+                  ":postalCode"
                 ],
                 "query": [],
-                "variable": []
+                "variable": [    
+		{
+		        "key": "postalCode",
+			"value": "A1B 2C3"
+		    }
+		]
               }
             },
             "status": "OK",
@@ -211,28 +221,24 @@
             }
           ],
           "url": {
-            "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+            "raw": "http:///api/postalCode-ws/validation/:postalCode/:provinceCode",
             "protocol": "http",
             "host":[],
             "path": [
               "api",
               "postalCode-ws",
               "validation",
-              "{postalCode}",
-              "{provinceCode}"
+              ":postalCode",
+              ":provinceCode"
             ],
-            "query": [
+            "variable": [
               {
                 "key": "postalCode",
-                "value": "{{postalCode}}",
-                "equals": true,
-                "description": ""
+                "value": ""
               },
               {
                 "key": "provinceCode",
-                "value": "{{provinceCode}}",
-                "equals": true,
-                "description": ""
+                "value": "}"
               }
             ]
           }
@@ -249,28 +255,24 @@
                 }
               ],
               "url": {
-                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "raw": "http:///api/postalCode-ws/validation/:postalCode/:provinceCode",
                 "protocol": "http",
                 "host":[],
                 "path": [
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}",
-                  "{provinceCode}"
+                  ":postalCode",
+                  ":provinceCode"
                 ],
-                "query": [
+                "variable": [
                   {
                     "key": "postalCode",
-                    "value": "12345",
-                    "equals": true,
-                    "description": ""
+                    "value": "12345"
                   },
                   {
                     "key": "provinceCode",
-                    "value": "ON",
-                    "equals": true,
-                    "description": ""
+                    "value": "ON"
                   }
                 ]
               }
@@ -287,7 +289,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Province 12345 is invalid\"}"
+	    "body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Province 12345 is invalid\"}"
           },
 
           {
@@ -301,28 +303,24 @@
                 }
               ],
               "url": {
-                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "raw": "http:///api/postalCode-ws/validation/:postalCode/:provinceCode",
                 "protocol": "http",
                 "host":[],
                 "path": [
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}",
-                  "{provinceCode}"
+                  ":postalCode",
+                  ":provinceCode"
                 ],
-                "query": [
+                "variable": [
                   {
                     "key": "postalCode",
-                    "value": "R1H2J3",
-                    "equals": true,
-                    "description": ""
+                    "value": "R1H2J3"
                   },
                   {
                     "key": "provinceCode",
-                    "value": "ON",
-                    "equals": true,
-                    "description": ""
+                    "value": "ON"
                   }
                 ]
               }
@@ -339,7 +337,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] A postal code from the province of ON must start with  one of K,L,M,N,P\"}"
+	    "body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] A postal code from the province of ON must start with  one of K,L,M,N,P\"}"
           },
 
           {
@@ -353,28 +351,24 @@
                 }
               ],
               "url": {
-                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "raw": "http:///api/postalCode-ws/validation/:postalCode/:provinceCode",
                 "protocol": "http",
                 "host":[],
                 "path": [
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}",
-                  "{provinceCode}"
+                  ":postalCode",
+                  ":rovinceCode"
                 ],
-                "query": [
+                "variable": [
                   {
                     "key": "postalCode",
-                    "value": "RJB123",
-                    "equals": true,
-                    "description": ""
+                    "value": "RJB123"
                   },
                   {
                     "key": "provinceCode",
-                    "value": "ON",
-                    "equals": true,
-                    "description": ""
+                    "value": "ON"
                   }
                 ]
               }
@@ -391,7 +385,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal code does not match pattern A1A 1A1 or A1A1A1.\"}"
+	    "body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal code does not match pattern A1A 1A1 or A1A1A1.\"}"
           },
 
           {
@@ -405,28 +399,24 @@
                 }
               ],
               "url": {
-                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "raw": "http:///api/postalCode-ws/validation/:postalCode/:provinceCode",
                 "protocol": "http",
                 "host":[],
                 "path": [
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}",
-                  "{provinceCode}"
+                  ":postalCode",
+                  ":provinceCode"
                 ],
                 "query": [
                   {
                     "key": "postalCode",
-                    "value": "W1H2J3",
-                    "equals": true,
-                    "description": ""
+                    "value": "W1H2J3"
                   },
                   {
                     "key": "provinceCode",
-                    "value": "ON",
-                    "equals": true,
-                    "description": ""
+                    "value": "ON"
                   }
                 ]
               }
@@ -443,7 +433,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z.\"}"
+	    "body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z.\"}"
           },
 
           {
@@ -457,28 +447,24 @@
                 }
               ],
               "url": {
-                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "raw": "http:///api/postalCode-ws/validation/postalCod}/provinceCode",
                 "protocol": "http",
                 "host":[],
                 "path": [
                   "api",
                   "postalCode-ws",
                   "validation",
-                  "{postalCode}",
-                  "{provinceCode}"
+                  ":postalCode",
+                  ":provinceCode"
                 ],
                 "query": [
                   {
                     "key": "postalCode",
-                    "value": "A1B2C3",
-                    "equals": true,
-                    "description": ""
+                    "value": "A1B2C3"
                   },
                   {
                     "key": "provinceCode",
-                    "value": "ON",
-                    "equals": true,
-                    "description": ""
+                    "value": "ON"
                   }
                 ]
               }
