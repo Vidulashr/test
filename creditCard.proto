@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package io.github.grpc.creditCardValidation.v1;
+
+service CreditCardValidation{
+    rpc greeting (GreetRequest) returns (GreetResponse);
+    rpc validationGuidance (ValidationGuidanceRequest) returns (ValidationGuidanceResponse);
+    rpc validateCreditCard (ValidateCreditCardRequest) returns (ValidateCreditCardResponse);
+}
+
+message GreetRequest {}
+
+message GreetResponse {
+    string message = 1;
+}
+
+message ValidationGuidanceRequest {}
+
+message ValidationGuidanceResponse {
+    string instruction = 1;
+}
+
+message ValidateCreditCardRequest {
+    string creditCardNumber = 1;
+}
+
+message ValidateCreditCardResponse {
+    int32 id = 1;
+    bool valid = 2;
+    string message = 3;
+}
