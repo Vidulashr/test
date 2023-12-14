@@ -287,9 +287,10 @@
             ],
             "cookie": [],
             "responseTime": 0,
-							"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Province 12345 is invalid\"}"
-            },
-            {
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Province 12345 is invalid\"}"
+          },
+
+          {
             "name": "not valid postal code letter for province",
             "originalRequest": {
               "method": "GET",
@@ -338,9 +339,10 @@
             ],
             "cookie": [],
             "responseTime": 0,
-							"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] A postal code from the province of ON must start with  one of K,L,M,N,P\"}"
-            },
-            {
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] A postal code from the province of ON must start with  one of K,L,M,N,P\"}"
+          },
+
+          {
             "name": "not valid postal code order",
             "originalRequest": {
               "method": "GET",
@@ -389,9 +391,10 @@
             ],
             "cookie": [],
             "responseTime": 0,
-							"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal code does not match pattern A1A 1A1 or A1A1A1.\"}"
-            },
-            {
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal code does not match pattern A1A 1A1 or A1A1A1.\"}"
+          },
+
+          {
             "name": "not valid postal code letters",
             "originalRequest": {
               "method": "GET",
@@ -440,59 +443,60 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z."}
-            ,
-            {
-              "name": "valid",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "url": {
-                  "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
-                  "protocol": "http",
-                  "host":[],
-                  "path": [
-                    "api",
-                    "postalCode-ws",
-                    "validation",
-                    "{postalCode}",
-                    "{provinceCode}"
-                  ],
-                  "query": [
-                    {
-                      "key": "postalCode",
-                      "value": "A1B2C3",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "provinceCode",
-                      "value": "ON",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "parsed",
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z.\"}"
+          },
+
+          {
+            "name": "valid",
+            "originalRequest": {
+              "method": "GET",
               "header": [
                 {
                   "key": "Accept",
                   "value": "application/json"
                 }
               ],
-              "cookie": [],
-              "responseTime": 0,
-							"body": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Postal Code Validation] Valid\"}"
+              "url": {
+                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "postalCode-ws",
+                  "validation",
+                  "{postalCode}",
+                  "{provinceCode}"
+                ],
+                "query": [
+                  {
+                    "key": "postalCode",
+                    "value": "A1B2C3",
+                    "equals": true,
+                    "description": ""
+                  },
+                  {
+                    "key": "provinceCode",
+                    "value": "ON",
+                    "equals": true,
+                    "description": ""
+                  }
+                ]
               }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "parsed",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Postal Code Validation] Valid\"}"
+          }
         ]
       }
     ]
