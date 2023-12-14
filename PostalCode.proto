@@ -8,6 +8,14 @@ message GreetingResponse{
     string greet = 1;
 }
 
+message ValidationRootResponse{
+    string validationGuidance = 1;
+}
+
+message ValidationPostalCodeOnlyResponse{
+    string validationGuidance = 1;
+}
+
 service PostalCodeValidation {
     rpc greeting() returns (GreetingResponse);
 
