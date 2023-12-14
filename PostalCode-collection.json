@@ -440,8 +440,8 @@
             ],
             "cookie": [],
             "responseTime": 0,
-							"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z."}"
-            },
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Postal Code Validation] Postal codes cannot contain the letters D, F, I, O, Q or U, and cannot start with W or Z."}
+            ,
             {
               "name": "valid",
               "originalRequest": {
