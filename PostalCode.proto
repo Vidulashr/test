@@ -1,37 +1,50 @@
 syntax = "proto3";
 
-package postalcodevalidation.v1;
+package postalcodevalidation;
 
-option java_multiple_files = true;
-
-message GreetingResponse{
-    string greet = 1;
+// The postal code validation service definition.
+service PostalCodeValidationService {
+    rpc Greet (GreetRequest) returns (GreetResponse);
+    rpc ValidateRoot (ValidateRootRequest) returns (ValidateRootResponse);
+    rpc ValidatePostalOnly (ValidatePostalOnlyRequest) returns (ValidatePostalOnlyResponse);
+    rpc ValidatePostalCode (ValidatePostalCodeRequest) returns (ValidatePostalCodeResponse);
 }
 
-message ValidationRootResponse{
-    string validationGuidance = 1;
+// Greet request
+message GreetRequest {}
+
+// Greet response
+message GreetResponse {
+    string message = 1;
 }
 
-message ValidationPostalCodeOnlyResponse{
-    string validationGuidance = 1;
+// ValidateRoot request
+message ValidateRootRequest {}
+
+// ValidateRoot response
+message ValidateRootResponse {
+    string instruction = 1;
 }
 
-message ValidationRequest{
-    string PostalCode = 1;
-    string ProvinceCode = 1;
+// ValidatePostalOnly request
+message ValidatePostalOnlyRequest {
+    string postalCode = 1;
 }
 
-message ValidatePostalCodeResponse{
-    string validity = 1;
+// ValidatePostalOnly response
+message ValidatePostalOnlyResponse {
+    string message = 1;
 }
 
-service PostalCodeValidation {
-    rpc greeting() returns (GreetingResponse);
+// ValidatePostalCode request
+message ValidatePostalCodeRequest {
+    string postalCode = 1;
+    string provinceCode = 2;
+}
 
-    rpc validationRoot() returns (ValidationRootResponse);
-
-    rpc validationPostalCodeOnly() returns (ValidationPostalCodeOnlyResponse);
-
-    rpc validatePostalCode(ValidationRequest) returns (ValidatePostalCodeResponse);
-
+// ValidatePostalCode response
+message ValidatePostalCodeResponse {
+    int32 id = 1;
+    bool valid = 2;
+    string message = 3;
 }
