@@ -74,15 +74,8 @@
             }
         ]
       },
-
-
-
-
-
-
-
       {
-        "name": "validation root",
+        "name": "validationRoot",
         "request": {
           "method": "GET",
           "header": [
@@ -143,16 +136,8 @@
             }
         ]
       },
-
-
-
-
-
-
-
-
       {
-        "name": "validation postal only",
+        "name": "validationPostalOnly",
         "request": {
           "method": "GET",
           "header": [
@@ -215,13 +200,8 @@
             }
         ]
       },
-
-
-
-
-
       {
-        "name": "Validate Postal Code",
+        "name": "validatePostalCode",
         "request": {
           "method": "GET",
           "header": [
