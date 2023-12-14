@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package postalcodevalidation;
 
-// The postal code validation service definition.
 service PostalCodeValidationService {
     rpc Greet (GreetRequest) returns (GreetResponse);
     rpc ValidateRoot (ValidateRootRequest) returns (ValidateRootResponse);
@@ -10,39 +9,31 @@ service PostalCodeValidationService {
     rpc ValidatePostalCode (ValidatePostalCodeRequest) returns (ValidatePostalCodeResponse);
 }
 
-// Greet request
 message GreetRequest {}
 
-// Greet response
 message GreetResponse {
     string message = 1;
 }
 
-// ValidateRoot request
 message ValidateRootRequest {}
 
-// ValidateRoot response
 message ValidateRootResponse {
     string instruction = 1;
 }
 
-// ValidatePostalOnly request
 message ValidatePostalOnlyRequest {
     string postalCode = 1;
 }
 
-// ValidatePostalOnly response
 message ValidatePostalOnlyResponse {
     string message = 1;
 }
 
-// ValidatePostalCode request
 message ValidatePostalCodeRequest {
     string postalCode = 1;
     string provinceCode = 2;
 }
 
-// ValidatePostalCode response
 message ValidatePostalCodeResponse {
     int32 id = 1;
     bool valid = 2;
