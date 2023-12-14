@@ -10,4 +10,11 @@ message GreetingResponse{
 
 service PostalCodeValidation {
     rpc greeting() returns (GreetingResponse);
+
+    rpc validationRoot() returns (ValidationRootResponse);
+
+    rpc validationPostalCodeOnly() returns (ValidationPostalCodeOnlyResponse);
+
+    rpc validatePostalCode() returns (ValidatePostalCodeResponse);
+
 }
