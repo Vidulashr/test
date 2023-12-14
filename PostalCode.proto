@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package postalcodevalidation;
 
-service PostalCodeValidationService {
+service PostalCodeValidation {
     rpc Greet (GreetRequest) returns (GreetResponse);
     rpc ValidateRoot (ValidateRootRequest) returns (ValidateRootResponse);
     rpc ValidatePostalOnly (ValidatePostalOnlyRequest) returns (ValidatePostalOnlyResponse);
