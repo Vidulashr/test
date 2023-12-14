@@ -4,6 +4,10 @@ package postalcodevalidation.v1;
 
 option java_multiple_files = true;
 
+message GreetingResponse{
+    string greet = 1;
+}
+
 service PostalCodeValidation {
-    rpc greeting(HelloRequest) returns (HelloResponse);
+    rpc greeting() returns (GreetingResponse);
 }
