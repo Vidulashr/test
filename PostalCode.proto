@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package postalcodevalidation.v1;
+package postalcodevalidation;
 
 // The postal code validation service definition.
 service PostalCodeValidationService {
