@@ -3,7 +3,7 @@
   "info": {
     "name": "PostalCodeValidation",
     "_postman_id": "7194f912-d5f5-3ca0-cf75-8a0b912abc4e",
-    "description": "version=1.0 - An API mock for postal code validation",
+    "description": "version=1 - An API mock for postal code validation",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
