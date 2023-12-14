@@ -1,0 +1,368 @@
+{
+  "variables": [],
+  "info": {
+    "name": "Postal Code Validation API Mock",
+    "_postman_id": "7194f912-d5f5-3ca0-cf75-8a0b912abc4e",
+    "description": "version=1.0 - An API mock for postal code validation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+    "name": "postal code",
+    "description": "folder for postal code",
+    "item": [
+      {
+        "name": "greeting",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/plain"
+            }
+          ],
+          "body": {},
+          "description": "greeting message for postal code",
+          "url": {
+            "raw": "http:///api/postalCode-ws",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "postalCode-ws"
+            ],
+            "query": [],
+            "variable": []
+          }
+        },
+        "response": [
+          {
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "text/plain"
+                }
+              ],
+              "body": {},
+              "url": {
+                "raw": "http:///api/postalCode-ws",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "postalCode-ws"
+                ],
+                "query": [],
+                "variable": []
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "text",
+            "header": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "Hello, you have reached the Postal Code Validation service"
+            }
+        ]
+      },
+
+
+
+
+
+
+
+      {
+        "name": "validation root",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/plain"
+            }
+          ],
+          "url": {
+            "raw": "http:///api/postalCode-ws/validation",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "postalCode-ws",
+              "validation"
+            ],
+            "query": [],
+            "variable": []
+          }
+        },
+        "response": [
+          {
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "text/plain"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/postalCode-ws/validation",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "postalCode-ws",
+                  "validation"
+                ],
+                "query": [],
+                "variable": []
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "text",
+            "header": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "Please provide a postal code and a provice as separate URI params (Postal Code / Province Code)"
+            }
+        ]
+      },
+
+
+
+
+
+
+
+
+      {
+        "name": "validation postal only",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/plain"
+            }
+          ],
+          "url": {
+            "raw": "http:///api/postalCode-ws/validation/{postalCode}/",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "postalCode-ws",
+              "validation",
+              "{postalCode}"
+            ],
+            "query": [],
+            "variable": []
+          }
+        },
+        "response": [
+          {
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "text/plain"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/postalCode-ws/validation/{postalCode}/",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "postalCode-ws",
+                  "validation",
+                  "{postalCode}"
+                ],
+                "query": [],
+                "variable": []
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "text",
+            "header": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "Please provide a postal code and a provice as separate URI params (Postal Code / Province Code)"
+            }
+        ]
+      },
+
+
+
+
+
+      {
+        "name": "Validate Postal Code",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "postalCode-ws",
+              "validation",
+              "{postalCode}",
+              "{provinceCode}"
+            ],
+            "query": [
+              {
+                "key": "postalCode",
+                "value": "{{postalCode}}",
+                "equals": true,
+                "description": ""
+              },
+              {
+                "key": "provinceCode",
+                "value": "{{provinceCode}}",
+                "equals": true,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "response": [
+          {
+            "name": "not valid",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "postalCode-ws",
+                  "validation",
+                  "{postalCode}",
+                  "{provinceCode}"
+                ],
+                "query": [
+                  {
+                    "key": "postalCode",
+                    "value": "12345",
+                    "equals": true,
+                    "description": ""
+                  },
+                  {
+                    "key": "provinceCode",
+                    "value": "NY",
+                    "equals": true,
+                    "description": ""
+                  }
+                ]
+              }
+            },
+            "status": "Not Found",
+            "code": 400,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "parsed",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": ""
+            },
+            {
+              "name": "valid",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http:///api/postalCode-ws/validation/{postalCode}/{provinceCode}",
+                  "protocol": "http",
+                  "host":[],
+                  "path": [
+                    "api",
+                    "postalCode-ws",
+                    "validation",
+                    "{postalCode}",
+                    "{provinceCode}"
+                  ],
+                  "query": [
+                    {
+                      "key": "postalCode",
+                      "value": "A1B2C3",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "provinceCode",
+                      "value": "ON",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "parsed",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": 1466,
+              "body": ""
+              }
+        ]
+      }
+    ]
+  }
+]
+}
