@@ -238,7 +238,7 @@
               },
               {
                 "key": "provinceCode",
-                "value": "}"
+                "value": ""
               }
             ]
           }
@@ -409,7 +409,7 @@
                   ":postalCode",
                   ":provinceCode"
                 ],
-                "query": [
+                "variable": [
                   {
                     "key": "postalCode",
                     "value": "W1H2J3"
