@@ -3,10 +3,10 @@ syntax = "proto3";
 package io.github.grpc.postalcodevalidation.v1;
 
 service PostalCodeValidation {
-    rpc Greet (GreetRequest) returns (GreetResponse);
-    rpc ValidateRoot (ValidateRootRequest) returns (ValidateRootResponse);
-    rpc ValidatePostalOnly (ValidatePostalOnlyRequest) returns (ValidatePostalOnlyResponse);
-    rpc ValidatePostalCode (ValidatePostalCodeRequest) returns (ValidatePostalCodeResponse);
+    rpc greeting (GreetRequest) returns (GreetResponse);
+    rpc validationRoot (ValidateRootRequest) returns (ValidateRootResponse);
+    rpc validationPostalOnly (ValidatePostalOnlyRequest) returns (ValidatePostalOnlyResponse);
+    rpc validatePostalCode (ValidatePostalCodeRequest) returns (ValidatePostalCodeResponse);
 }
 
 message GreetRequest {}
