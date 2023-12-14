@@ -1,0 +1,301 @@
+{
+  "variables": [],
+  "info": {
+    "name": "CreditCardValidation",
+    "_postman_id": "7194f912-d5f5-3ca0-cf75-8a0b912abc4e",
+    "description": "version=1.0 - An API mock for credit card validation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+    "name": "credit card",
+    "description": "folder for credit card",
+    "item": [
+      {
+        "name": "greeting",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/plain"
+            }
+          ],
+          "body": {},
+          "description": "greeting message for credit card",
+          "url": {
+            "raw": "http:///api/creditCard-ws",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "creditCard-ws"
+            ],
+            "query": [],
+            "variable": []
+          }
+        },
+        "response": [
+          {
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "text/plain"
+                }
+              ],
+              "body": {},
+              "url": {
+                "raw": "http:///api/creditCard-ws",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "creditCard-ws"
+                ],
+                "query": [],
+                "variable": []
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "text",
+            "header": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "Hello, you have reached the Credit Card Validation service"
+            }
+        ]
+      },
+      {
+        "name": "validationGuidance",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/plain"
+            }
+          ],
+          "url": {
+            "raw": "http:///api/creditCard-ws/validation",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "creditCard-ws",
+              "validation"
+            ],
+            "query": [],
+            "variable": []
+          }
+        },
+        "response": [
+          {
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "text/plain"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/creditCard-ws/validation",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "creditCard-ws",
+                  "validation"
+                ],
+                "query": [],
+                "variable": []
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "text",
+            "header": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "Please provide a credit card number as a URI param"
+            }
+        ]
+      },
+      {
+        "name": "validateCreditCard",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http:///api/creditCard-ws/validation/:creditCardNumber",
+            "protocol": "http",
+            "host":[],
+            "path": [
+              "api",
+              "creditCard-ws",
+              "validation",
+              ":creditCardNumber"
+            ],
+            "variable": [
+              {
+                "key": "creditCardNumber",
+                "value": ""
+              }
+            ]
+          }
+        },
+        "response": [
+          {
+            "name": "failed number validation",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/creditCard-ws/validation/:creditCardNumber",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "creditCard-ws",
+                  "validation",
+                  ":creditCardNumber"
+                ],
+                "variable": [
+                  {
+                    "key": "creditCardNumber",
+                    "value": "1111111111111111"
+                  }
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "parsed",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed number validation.\"}"
+          },
+
+          {
+            "name": "failed checksum",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/creditCard-ws/validation/:creditCardNumber",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "creditCard-ws",
+                  "validation",
+                  ":creditCardNumber"
+                ],
+                "variable": [
+                  {
+                    "key": "creditCardNumber",
+                    "value": "12345"
+                  }
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "parsed",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed checksum.\"}"
+          },
+
+          {
+            "name": "valid",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "http:///api/creditCard-ws/validation/:creditCardNumber",
+                "protocol": "http",
+                "host":[],
+                "path": [
+                  "api",
+                  "creditCard-ws",
+                  "validation",
+                  ":creditCardNumber"
+                ],
+                "variable": [
+                  {
+                    "key": "creditCardNumber",
+                    "value": "5105510551055105"
+                  }
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "_postman_previewtype": "parsed",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "cookie": [],
+            "responseTime": 0,
+            "body": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Credit Card Validation] Valid.\"}"
+          }
+        ]
+      }
+    ]
+  }
+]
+}
