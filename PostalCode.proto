@@ -1,36 +1,9 @@
 syntax = "proto3";
 
-package postalcodevalidation;
+package postalcodevalidation.v1;
 
-option java_package = "org.genericorg";
+option java_multiple_files = true;
 
-message GreetingRequest {
-}
-
-message GreetingResponse {
-    string message = 1;
-}
-
-message ValidationRootRequest {
-}
-
-message ValidationRootResponse {
-    string message = 1;
-}
-
-message ValidationPostalOnlyRequest {
-    string postalCode = 1;
-}
-
-message ValidationPostalOnlyResponse {
-    string message = 1;
-}
-
-message ValidatePostalCodeRequest {
-    string postalCode = 1;
-    string provinceCode = 2;
-}
-
-message ValidatePostalCodeResponse {
-    string result = 1;
+service PostalCodeValidation {
+    rpc greeting(HelloRequest) returns (HelloResponse);
 }
