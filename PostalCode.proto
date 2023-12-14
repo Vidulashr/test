@@ -16,6 +16,15 @@ message ValidationPostalCodeOnlyResponse{
     string validationGuidance = 1;
 }
 
+message ValidationRequest{
+    string PostalCode = 1;
+    string ProvinceCode = 1;
+}
+
+message ValidatePostalCodeResponse{
+    string validity = 1;
+}
+
 service PostalCodeValidation {
     rpc greeting() returns (GreetingResponse);
 
@@ -23,6 +32,6 @@ service PostalCodeValidation {
 
     rpc validationPostalCodeOnly() returns (ValidationPostalCodeOnlyResponse);
 
-    rpc validatePostalCode() returns (ValidatePostalCodeResponse);
+    rpc validatePostalCode(ValidationRequest) returns (ValidatePostalCodeResponse);
 
 }
