@@ -70,15 +70,8 @@
             ],
             "cookie": [],
             "responseTime": 0,
-	    "body": {
-		"mode": "raw",
-		"raw": "Hello, you have reached the Credit Card Validation service",
-		"options": {
-			"raw": {
-				"language": "json"
-			}
-		}
-	   }
+            "body": "Hello, you have reached the Credit Card Validation service"
+            }
         ]
       },
       {
@@ -139,15 +132,8 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": {
-		"mode": "raw",
-		"raw": "Please provide a credit card number as a URI param",
-		"options": {
-			"raw": {
-				"language": "json"
-			}
-		}
-	   }
+            "body": "Please provide a credit card number as a URI param"
+            }
         ]
       },
       {
@@ -219,15 +205,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": {
-		"mode": "raw",
-		"raw": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed number validation.\"}",
-		"options": {
-			"raw": {
-				"language": "json"
-			}
-		}
-	   }
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed number validation.\"}"
           },
 
           {
@@ -270,15 +248,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-	    "body": {
-		"mode": "raw",
-		"raw": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed checksum.\"}",
-		"options": {
-			"raw": {
-				"language": "json"
-			}
-		}
-	   }
+						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed checksum.\"}"
           },
 
           {
@@ -321,15 +291,7 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": {
-		"mode": "raw",
-		"raw": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Credit Card Validation] Valid.\"}",
-		"options": {
-			"raw": {
-				"language": "json"
-			}
-		}
-	   }
+            "body": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Credit Card Validation] Valid.\"}"
           }
         ]
       }
