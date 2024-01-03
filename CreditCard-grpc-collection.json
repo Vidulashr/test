@@ -70,8 +70,15 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": "Hello, you have reached the Credit Card Validation service"
-            }
+	    "body": {
+		"mode": "raw",
+		"raw": "Hello, you have reached the Credit Card Validation service",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	   }
         ]
       },
       {
@@ -132,8 +139,15 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": "Please provide a credit card number as a URI param"
-            }
+            "body": {
+		"mode": "raw",
+		"raw": "Please provide a credit card number as a URI param",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	   }
         ]
       },
       {
@@ -205,7 +219,15 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed number validation.\"}"
+            "body": {
+		"mode": "raw",
+		"raw": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed number validation.\"}",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	   }
           },
 
           {
@@ -248,7 +270,15 @@
             ],
             "cookie": [],
             "responseTime": 0,
-						"body": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed checksum.\"}"
+	    "body": {
+		"mode": "raw",
+		"raw": "{\"id\": \"-1\", \"valid\": false, \"message\": \"[Credit Card Validation] Failed checksum.\"}",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	   }
           },
 
           {
@@ -291,7 +321,15 @@
             ],
             "cookie": [],
             "responseTime": 0,
-            "body": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Credit Card Validation] Valid.\"}"
+            "body": {
+		"mode": "raw",
+		"raw": "{\"id\": \"-1\", \"valid\": true, \"message\": \"[Credit Card Validation] Valid.\"}",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	   }
           }
         ]
       }
