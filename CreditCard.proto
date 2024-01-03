@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package io.github.grpc.creditCardValidation.v1;
+package creditCardValidation.v1;
 
 service CreditCardValidation{
     rpc greeting (GreetRequest) returns (GreetResponse);
