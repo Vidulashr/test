@@ -2,10 +2,21 @@ syntax = "proto3";
 
 package io.github.grpc.creditCardValidation.v1;
 
+import "google/api/annotations.proto";
+
 service CreditCardValidation{
-    rpc greeting (GreetRequest) returns (GreetResponse);
-    rpc validationGuidance (ValidationGuidanceRequest) returns (ValidationGuidanceResponse);
-    rpc validateCreditCard (ValidateCreditCardRequest) returns (ValidateCreditCardResponse);
+    rpc greeting (GreetRequest) returns (GreetResponse){
+        option (google.api.http) = {
+          get: "/api/creditCard-ws"
+    };
+    rpc validationGuidance (ValidationGuidanceRequest) returns (ValidationGuidanceResponse){
+        option (google.api.http) = {
+          get: "/api/creditCard-ws/validation"
+    };
+    rpc validateCreditCard (ValidateCreditCardRequest) returns (ValidateCreditCardResponse){
+        option (google.api.http) = {
+          get: "/api/creditCard-ws/validation/{creditCardNumber}"
+    };
 }
 
 message GreetRequest {}
