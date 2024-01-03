@@ -8,15 +8,18 @@ service CreditCardValidation{
     rpc greeting (GreetRequest) returns (GreetResponse){
         option (google.api.http) = {
           get: "/api/creditCard-ws"
-    };
+        };
+    }
     rpc validationGuidance (ValidationGuidanceRequest) returns (ValidationGuidanceResponse){
         option (google.api.http) = {
           get: "/api/creditCard-ws/validation"
-    };
+        };
+    }
     rpc validateCreditCard (ValidateCreditCardRequest) returns (ValidateCreditCardResponse){
         option (google.api.http) = {
           get: "/api/creditCard-ws/validation/{creditCardNumber}"
-    };
+        };
+    }
 }
 
 message GreetRequest {}
