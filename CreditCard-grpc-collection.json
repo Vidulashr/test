@@ -41,10 +41,8 @@
               "method": "GET",
               "header": [
                 {
-		  "key": "Content-Type",
-		  "name": "Content-Type",
-		  "value": "application/json",
-		  "type": "text"
+                  "key": "Accept",
+                  "value": "text/plain"
                 }
               ],
               "body": {},
@@ -105,10 +103,8 @@
               "method": "GET",
               "header": [
                 {
-		  "key": "Content-Type",
-		  "name": "Content-Type",
-		  "value": "application/json",
-		  "type": "text"
+                  "key": "Accept",
+                  "value": "text/plain"
                 }
               ],
               "url": {
@@ -175,10 +171,8 @@
               "method": "GET",
               "header": [
                 {
-		  "key": "Content-Type",
-		  "name": "Content-Type",
-		  "value": "application/json",
-		  "type": "text"
+                  "key": "Accept",
+                  "value": "application/json"
                 }
               ],
               "url": {
